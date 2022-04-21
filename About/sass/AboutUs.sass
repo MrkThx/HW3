@@ -1,0 +1,365 @@
+
+//參數--媒體的螢幕寬度:
+$mobile-wid: 680px //max mobile width
+
+@mixin mobile
+    @media all and (max-width: $mobile-wid)
+        @content
+
+%maps
+    display: flex
+    //align-items: space-around
+    flex-wrap: no-wrap
+    position: absolute
+    left: 3vw
+    right: 3vw
+    height: 60vh
+%map_imgs
+    height: 60vh
+    min-height: 60px
+    width: 60vw
+    min-width: 260px
+    max-width: 500px
+    display: flex
+%map_intros
+    display: flex-inline-block
+    background-color: rgb(255, 255, 255,0.5)
+    align-content: space-between
+    position: absolute
+    right:0
+    height: 60vh
+    width: 50vw
+    min-width: 80px
+    max-width: 400px
+%cardss
+    width: 30%
+    height: 95%
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+%pers
+    position: absolute
+    width: 100%
+    height: 100%
+    visibility: hidden
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    opacity: 0%
+%bs
+    position: absolute
+    width: 3em
+    height: 3em
+    right: 0%
+    top: 0%
+    visibility: hidden
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+#head
+    position: fixed
+    width: 100%
+    height: 8vh
+    top: 0px
+    left: 0px
+    
+.word
+    font-family: 'Varela Round', sans-serif
+    font-weight: normal
+   
+.op
+    font-family: 'Varela Round', sans-serif
+    font-weight: normal
+    //transform: translate(0,-50%)
+    font-size: 20px
+    color: #78D19B
+    @include mobile
+        color: #174920
+
+.opt
+    display: inline-block
+    padding-left: 3vw
+    @include mobile
+        height: 5vh
+        padding-left: 0vw
+        display: block
+        text-align: center
+        width: 100vw
+        border-bottom: 1px solid #ddd
+        //visibility: hidden
+   
+.burger
+    display: none
+    font-size: 15px
+    @include mobile
+        position: fixed
+        top: 0.5vw
+        text-align: center
+        color: #78D19B
+        display: block
+
+#head_word
+    position: absolute
+    top: 50%
+    left: 0vw
+    transform: translate(0,-50%)
+    margin-top: 0px
+    margin-bottom: 0px
+    @include mobile
+        background-color:  rgb(255, 255, 255,0.7)
+        visibility: hidden
+        top: -1vw
+        left: -10vw
+        width: 200%
+        transform: translate(0,-10%)
+  
+
+
+#head_word2
+    position: absolute
+    top: 50%
+    right: 3vw
+    transform: translate(0,-50%)
+    font-size: 15px
+    color: #174920
+    margin-top: 0px
+    margin-bottom: 0px
+    padding: 0px 5px 5px 1px
+    border-radius: 4px
+#avatar
+    width: 100%
+    height: 50vh
+    position: absolute
+    top: 8vh
+    left:0
+
+/*#Avatar_word
+    position: absolute
+    color: white
+    top: 40vh
+    left: 40vw*/
+
+#scooter
+    background-repeat: no-repeat
+    background-size: contain
+    position: absolute
+    bottom: 2vh
+    height: 40vh
+//map====================================================//
+#map1
+    background-color: white
+    top: 80vh
+    @extend %maps
+
+#map1_img
+    background-image: url('../AboutUs/RGC_2420.jpg')
+    background-size: cover
+    background-position: center
+    @extend %map_imgs
+
+#introduction 
+    @extend %map_intros
+
+#introduction_title, #Campus_title, #Shield_title
+    font-weight: bold
+    margin-top: 0px
+    margin-bottom: 0px
+
+#map2
+    background-color: white
+    top: 150vh
+    @extend %maps
+#map2_img
+    background-image: url('../AboutUs/map.jpg')
+    background-size: cover
+    background-position: center
+    @extend %map_imgs
+#Campus
+    @extend %map_intros
+
+#map3
+    top: 220vh
+    @extend %maps
+#map3_img
+    background-image: url('../AboutUs/shield.jpg')
+    background-size: cover
+    background-position: center
+    position: absolute
+    right: 0px
+    height: 60vh
+    min-height: 60px
+    width: 50vw
+    min-width: 80px
+    max-width: 400px
+#Shield
+    display: flex-inline
+    background-color: rgb(255, 255, 255,0.5)
+    height: 60vh
+    width: 40vw
+    min-width: 80px
+    max-width: 500px
+
+.title
+    position: absolute
+    top: 300vh
+    left: 3vw
+    text-align: left
+    transform: translate(5%,0%)
+    font-size: larger
+    font-family: 'Varela Round', sans-serif
+    font-weight: bold
+    color: #1C4E3B
+
+.pro
+    position: absolute
+    top: 320vh
+    width: 99%
+    height: 100%
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+    z-index: 0
+    display: flex
+
+.card
+    display: inline-block
+    position: absolute
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 99vw
+    max-width: 500px
+    height: 26%
+    background-color: #1C4E3B
+    border-radius: 15px
+
+.first
+    top: 15%
+.second
+    top: 43%
+.third
+    top: 71%
+.fourth
+    top: 99%
+.fifth
+    top: 127%
+
+.name
+    width: 50%
+    height: 50%
+    font-weight: 1000
+    font-style: italic
+    font-size: larger
+    color: aliceblue
+    transform: translate(-5%,75%)
+    display: flex
+    justify-content: center
+    align-content: flex-end
+    flex-wrap: wrap
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+
+.photo
+    position: absolute
+    width: 60%
+    height: 70%
+    transform: translate(50%,-50%)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+
+.A
+    background-image: url(../AboutUs/1.jpg)
+    @extend %cardss
+
+
+.B
+    background-image: url(../AboutUs/2.jpg)
+    @extend %cardss
+
+
+.C
+    background-image: url(../AboutUs/3.jpg)
+    @extend %cardss
+
+
+.D
+    background-image: url(../AboutUs/4.jpg)
+    @extend %cardss
+
+
+.E
+    background-image: url(../AboutUs/5.jpg)
+    @extend %cardss
+
+
+.intro
+    position: fixed
+    width: 30vw
+    min-width: 300px
+    height: 100vh
+    min-height: 500px
+    left: 40%
+    top: -5vh
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    z-index: 3
+
+#per1
+    background-image: url("../AboutUs/personal1.png")
+    @extend %pers
+
+#per2
+    background-image: url("../AboutUs/personal2.png")
+    @extend %pers
+#per3
+    background-image: url("../AboutUs/personal3.png")
+    @extend %pers
+
+#per4
+    background-image: url("../AboutUs/personal4.png")
+    @extend %pers
+
+#per5
+    background-image: url("../AboutUs/personal5.png")
+    @extend %pers
+
+
+#b1
+    background-image: url("../AboutUs/cancel1.png")
+    @extend %bs
+
+#b2
+    background-image: url("../AboutUs/cancel2.png")
+    @extend %bs
+
+
+#b3
+    background-image: url("../AboutUs/cancel3.png")
+    @extend %bs
+
+
+#b4
+    background-image: url("../AboutUs/cancel4.png")
+    @extend %bs
+
+
+#b5
+    background-image: url("../AboutUs/cancel5.png")
+    @extend %bs
+
+
+#black
+    background-color: black
+    position: fixed
+    opacity: 50%
+    width: 100%
+    height: 100%
+    right: 0%
+    top: 0%
+    visibility: hidden
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    z-index: 2
